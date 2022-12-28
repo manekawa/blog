@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 // Add your own social icons by using https://mui.com/components/material-icons
 import TwitterIcon from '@mui/icons-material/Twitter'
 import GitHubIcon from '@mui/icons-material/GitHub'
-import RssFeedIcon from '@mui/icons-material/RssFeed'
+// import RssFeedIcon from '@mui/icons-material/RssFeed'
 import FacebookIcon from '@mui/icons-material/Facebook'
 
 import styles from './Navigation.module.css'
@@ -63,11 +63,11 @@ const Navigation = () => {
               <FacebookIcon />
             </a>
           </li> }
-          <li>
+          {/* <li>
             <a href="/rss.xml" title="RSS">
               <RssFeedIcon />
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>

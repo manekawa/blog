@@ -25,7 +25,7 @@ const Layout = ({ children, title, description, image, isArticle = false }) => {
     </main>
 
     <footer className={styles.footer}>
-        Created by <a
+        Powered by <a
           href="https://wweb.dev"
           target="_blank"
           rel="noopener noreferrer"

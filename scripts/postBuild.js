@@ -46,10 +46,10 @@ let rss =
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 
 <channel>
-    <title>wweb.dev</title>
+    <title>${meta.title}</title>
     <link>${meta.baseUri}</link>
-    <description>Stay up to date with weekly updates, get resources for next project and read articles and tutorials about web development.</description>
-    <pubDate>Wed, 13 May 2020 05:57:32 GMT</pubDate>
+    <description>${meta.description}</description>
+    <pubDate>Wed, 28 Dec 2022 12:24:32 GMT</pubDate>
     <lastBuildDate>${now.toUTCString()}</lastBuildDate>
     <atom:link href="${meta.baseUri}/rss.xml" rel="self" type="application/rss+xml" />`
 

@@ -1,21 +1,19 @@
 const meta = {
-  name: 'Next.js Blog Template',
-  description: 'A simple blog template made with Next.js',
+  name: 'manekawa\'s blog',
+  description: 'anything to be noted',
   shareImage: '/share.jpg',
-  baseUri: 'https://wwebdev-nextjs-blog-template.vercel.app', // optional
+  baseUri: 'https://manekawa.dev', // optional
 
-  twitter: 'wweb_dev', // optional
-  github: 'https://github.com/wwebdev/nextjs-blog-template', // optional
-  // facebook: 'https://facebook.com/something', // optional
+  twitter: 'Anek_mass', // optional
+  github: 'https://github.com/manekawa', // optional
 
   // Navigation -> optional
-  pages: [{
-    name: 'Home',
-    link: '/',
-  }, {
-    name: 'Category',
-    link: '/category',
-  }]
+  pages: [
+    {
+      name: 'Home',
+      link: '/',
+    },
+  ]
 }
 
 module.exports = meta
