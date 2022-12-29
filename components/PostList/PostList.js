@@ -1,22 +1,24 @@
-import React from 'react'
+import React from "react";
 import Image from "next/image";
-import Link from 'next/link'
+import Link from "next/link";
 
-import posts from '../../content/posts'
-import styles from './PostList.module.css'
+import posts from "../../content/posts";
+import styles from "./PostList.module.css";
 
 const PostList = ({ category, layout }) => {
-  const postList = posts.filter(p => p.categories.includes(category)) || []
+  const postList = posts.filter((p) => p.categories.includes(category)) || [];
 
   return (
     <section className={styles.container}>
-      { postList.map(post =>
+      {postList.map((post) => (
         <div key={post.title} className={styles.post}>
-          { layout !== 'simple' && <div className={styles.imageContainer}>
-            <Image src={post.image} alt={post.title} fill sizes="100vw" />
-          </div> }
+          {layout !== "simple" && (
+            <div className={styles.imageContainer}>
+              <Image src={post.image} alt={post.title} fill sizes="100vw" />
+            </div>
+          )}
           <div className={styles.postContent}>
-            { post.date && <date>{post.date}</date> }
+            {post.date && <date>{post.date}</date>}
             <h2>
               <Link href={post.link} legacyBehavior>
                 <a>{post.title}</a>
@@ -25,9 +27,9 @@ const PostList = ({ category, layout }) => {
             <p>{post.description}</p>
           </div>
         </div>
-      )}
+      ))}
     </section>
   );
-}
+};
 
-export default PostList
+export default PostList;

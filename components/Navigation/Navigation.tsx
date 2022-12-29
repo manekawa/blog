@@ -1,22 +1,22 @@
-import React from 'react'
+import React from "react";
 import Image from "next/image";
-import Link from 'next/link'
-import { useRouter } from 'next/router'
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 // Add your own social icons by using https://mui.com/components/material-icons
-import TwitterIcon from '@mui/icons-material/Twitter'
-import GitHubIcon from '@mui/icons-material/GitHub'
+import TwitterIcon from "@mui/icons-material/Twitter";
+import GitHubIcon from "@mui/icons-material/GitHub";
 // import RssFeedIcon from '@mui/icons-material/RssFeed'
-import FacebookIcon from '@mui/icons-material/Facebook'
+import FacebookIcon from "@mui/icons-material/Facebook";
 
-import styles from './Navigation.module.css'
-import meta from '../../content/meta'
+import styles from "./Navigation.module.css";
+import meta from "../../content/meta";
 
-const pages = meta.pages || []
+const pages = meta.pages || [];
 
 const Navigation = () => {
-  const router = useRouter()
-  const activeRoute = `/${router.pathname.split('/')[1]}`
+  const router = useRouter();
+  const activeRoute = `/${router.pathname.split("/")[1]}`;
 
   return (
     <div className={styles.wrapper}>
@@ -32,42 +32,49 @@ const Navigation = () => {
               src="/imgs/logo-placeholder.png"
               alt="My Awesome Website"
               fill
-              priority />
+              priority
+            />
           </a>
         </Link>
         <div className={styles.navigation}>
           <ul>
-            {pages.map(page =>
+            {pages.map((page) => (
               <li key={page.link}>
                 <Link href={page.link} legacyBehavior>
-                  <a className={activeRoute === page.link ? styles.active : ''}>
+                  <a className={activeRoute === page.link ? styles.active : ""}>
                     {page.name}
                   </a>
                 </Link>
               </li>
-            )}
+            ))}
           </ul>
           <ul className={styles.socialIcons}>
-            { meta.twitter && <li>
-              <a href={`https://twitter.com/${meta.twitter}`} title="Twitter">
-                <TwitterIcon />
-              </a>
-            </li> }
-            { meta.github && <li>
-              <a href={meta.github} title="GitHub">
-                <GitHubIcon />
-              </a>
-            </li> }
-            { meta.facebook && <li>
-              <a href={meta.facebook} title="Facebook">
-                <FacebookIcon />
-              </a>
-            </li> }
+            {meta.twitter && (
+              <li>
+                <a href={`https://twitter.com/${meta.twitter}`} title="Twitter">
+                  <TwitterIcon />
+                </a>
+              </li>
+            )}
+            {meta.github && (
+              <li>
+                <a href={meta.github} title="GitHub">
+                  <GitHubIcon />
+                </a>
+              </li>
+            )}
+            {meta.facebook && (
+              <li>
+                <a href={meta.facebook} title="Facebook">
+                  <FacebookIcon />
+                </a>
+              </li>
+            )}
           </ul>
         </div>
       </nav>
     </div>
   );
-}
+};
 
-export default Navigation
+export default Navigation;
