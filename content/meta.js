@@ -6,6 +6,7 @@ const meta = {
 
   twitter: 'Anek_mass', // optional
   github: 'https://github.com/manekawa', // optional
+  facebook: undefined,
 
   // Navigation -> optional
   pages: [
