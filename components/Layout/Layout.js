@@ -19,7 +19,7 @@ const Layout = ({ children, title, description, image, isArticle = false }) => {
 
       {title && (
         <header className={image ? styles.imageHeader : styles.header}>
-          {image && <Image src={image} alt={title} fill sizes="100vw" />}
+          {image && <Image src={image} alt={title} layout="fill" />}
           <h1 className={styles.title}>{title}</h1>
 
           {description && <p className={styles.description}>{description}</p>}

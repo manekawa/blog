@@ -14,7 +14,7 @@ const PostList = ({ category, layout }) => {
         <div key={post.title} className={styles.post}>
           {layout !== "simple" && (
             <div className={styles.imageContainer}>
-              <Image src={post.image} alt={post.title} fill sizes="100vw" />
+              <Image src={post.image} alt={post.title} layout="fill" />
             </div>
           )}
           <div className={styles.postContent}>
