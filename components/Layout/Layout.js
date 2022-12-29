@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
+import Image from "next/legacy/image";
 import styles from './Layout.module.css'
 import Head from '../Head/Head'
 import Navigation from '../Navigation/Navigation'
