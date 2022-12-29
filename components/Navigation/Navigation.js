@@ -25,7 +25,7 @@ const Navigation = () => {
       <span></span>
       <span></span>
 
-      <Link href="/">
+      <Link href="/" legacyBehavior>
         <a className={styles.logo}>
           <Image
             src="/imgs/logo-placeholder.png"
@@ -39,7 +39,7 @@ const Navigation = () => {
         <ul>
           {pages.map(page =>
             <li key={page.link}>
-              <Link href={page.link}>
+              <Link href={page.link} legacyBehavior>
                 <a className={activeRoute === page.link ? styles.active : ''}>
                   {page.name}
                 </a>

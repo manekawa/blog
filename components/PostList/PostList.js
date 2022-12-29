@@ -17,7 +17,7 @@ const PostList = ({ category, layout }) => {
         <div className={styles.postContent}>
           { post.date && <date>{post.date}</date> }
           <h2>
-            <Link href={post.link}>
+            <Link href={post.link} legacyBehavior>
               <a>{post.title}</a>
             </Link>
           </h2>
