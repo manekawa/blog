@@ -1,0 +1,6 @@
+@media (min-width: 500px) {
+  /* Hide the hamburger button on desktop displays */
+  .hamburger {
+    display: none;
+  }
+}
